@@ -26,14 +26,17 @@ function rightClick(){
 }
 
 
-function toggleDisplay(id) {
-    if (document.getElementById(id).style.display == "none") {
-        document.getElementById(id).style.display = "block";
-    } else {
+function toggleDisplay(id, id2) {
+    if (document.getElementById(id).style.display == "block") {
         document.getElementById(id).style.display = "none";
+        document.getElementById(id2).innerHTML = ">";
+    } else {
+        document.getElementById(id).style.display = "block";
+        document.getElementById(id2).innerHTML = "^";
     }
 }
 
 function displayMenu(){
     alert('Menu Displayed')
 }
+
