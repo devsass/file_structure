@@ -23,7 +23,7 @@
 }
 
 #main, #src, #addsrc, #addmain {
-    background: lightgrey;
+    background: transparent;
     border: none;
     margin: 0;
     padding: 0;
