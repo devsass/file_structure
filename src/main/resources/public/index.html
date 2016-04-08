@@ -9,11 +9,26 @@
     </style>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
     <h1>File Structure</h1>
     <script src="structureLogic.js"></script>
-    <button id="creator" oncontextmenu="rightClick()" >Create</button>
-    <button id="newfile" onclick="createButton()">+</button>
+    <div id="Projects" class="btn-group-vertical">
+        <img id="i1.1" src="test.png" width="32" height="24.25">
+        <button id="project" oncontextmenu="displayMenu()">project</button>
+    </div>
+
+    <div id="Srcs" class="btn-group-vertical">
+        <button id="drop1" onclick="toggleDisplay('Mains')">></button>
+        <img id="i1" src="index.jpg" width="32" height="24.25">
+        <button id="src" oncontextmenu="displayMenu()">src</button>
+        <button id="addsrc" onclick="createButton()" >+</button>
+    </div>
+    <div id="Mains" class="btn-group-vertical">
+        <button id="drop2" >></button>
+        <img id="i2" src="index.jpg" width="32" height="24.25">
+        <button id="main" oncontextmenu="displayMenu()">main</button>
+        <button id="addmain" onclick="createButton()" >+</button>
+    </div>
 </body>
 
 </html>
