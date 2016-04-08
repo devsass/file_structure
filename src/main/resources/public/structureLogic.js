@@ -5,7 +5,6 @@ var webSocket = new WebSocket("ws://" + location.hostname + ":" + location.port 
 webSocket.createStructure = function () { };
 var creator = document.getElementById('creator');
 var newfile = document.getElementById('newfile');
-document.getElementById("creator").addEventListener("click", createButton);
 var bCount = 1;
 
 
@@ -19,13 +18,22 @@ function createButton () {
     button.setAttribute("id", buttonName);
     document.getElementById(buttonName).addEventListener("click", createButton);
     document.getElementById(buttonName).addEventListener("oncontextmenu", rightClick);
-
 }
 
 
 function rightClick(){
-    document.getElementById("creator").addEventListener("click", createButton);
-    alert('You right clicked me');
-    creator.firstChild.data = "renamed";
+
 }
 
+
+function toggleDisplay(id) {
+    if (document.getElementById(id).style.display == "none") {
+        document.getElementById(id).style.display = "block";
+    } else {
+        document.getElementById(id).style.display = "none";
+    }
+}
+
+function displayMenu(){
+    alert('Menu Displayed')
+}
