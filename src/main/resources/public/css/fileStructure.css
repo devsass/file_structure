@@ -1,8 +1,34 @@
-#creator {
-    background-color: firebrick;
-}
-button {
-    background-color: deepskyblue;
-    position:relative;
+#add {
+    position: relative;
 }
 
+#Mains {
+    padding-left: 25px;
+}
+
+.container {
+    z-index: 2;
+    position: absolute;
+}
+
+#src {
+
+}
+
+#drop1, #drop2 {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main, #src, #addsrc, #addmain {
+    background: lightgrey;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Mains {
+    display: none;
+}
