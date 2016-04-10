@@ -1,10 +1,13 @@
 .FileManagement {
-    background-color: #8fc13e;
+    background-color: #93a1a1;
     width: auto;
     height: 500px;
     text-align: left;
     overflow: hidden;
+
 }
+
+
 
 .contain {
     position: relative;
@@ -17,6 +20,17 @@
 }
 
 .fileStyle {
+    padding-left: 25px;
+    background: transparent;
+    border: none;
+}
+
+.dropdown {
+    background: transparent;
+    border: none;
+}
+
+.addButton {
     background: transparent;
     border: none;
 }
@@ -27,6 +41,7 @@
     margin: 0;
     padding: 0;
 }
+
 
 
 
@@ -59,10 +74,12 @@
 }
 
 #Srcs {
+    color: #141414;
     padding-top: 100px;
 }
 
 #Mains {
+    color: #141414;
     display: none;
     padding-left: 25px;
 }
