@@ -11,6 +11,16 @@
     margin: auto;
 }
 
+
+.folder {
+    white-space: nowrap;
+}
+
+.fileStyle {
+    background: transparent;
+    border: none;
+}
+
 #drop1, #drop2 {
     background: transparent;
     border: none;
@@ -31,17 +41,21 @@
     padding-left: 25px;
     display: none;
     padding-top: 0px;
-    width: 0px;
+    width: 40px;
     margin: 0;
+    background: transparent;
+    border: none;
 }
+
 
 #mainFiles {
     padding-left: 25px;
     display: none;
     padding-top: 0px;
-
-    width: 0px;
+    width: 40px;
     margin: 0;
+    background: transparent;
+    border: none;
 }
 
 #Srcs {
