@@ -8,7 +8,7 @@ var newfile = document.getElementById('newfile');
 var bCount = 1;
 
 
-function createButton () {
+function createButton (divID) {
     var buttonName = 'button' + bCount;
     bCount += 1;
     var name = document.createTextNode(buttonName);
@@ -16,8 +16,8 @@ function createButton () {
     button.appendChild(name);
     document.body.appendChild(button);
     button.setAttribute("id", buttonName);
-    document.getElementById(buttonName).addEventListener("click", createButton);
-    document.getElementById(buttonName).addEventListener("oncontextmenu", rightClick);
+    button.addEventListener("dblclick", openFile);
+    document.getElementById(divID).appendChild(button);
 }
 
 
@@ -38,5 +38,9 @@ function toggleDisplay(id, id2) {
 
 function displayMenu(){
     alert('Menu Displayed')
+}
+
+function openFile() {
+    alert('You opened a file');
 }
 

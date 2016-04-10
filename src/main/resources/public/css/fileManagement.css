@@ -1,6 +1,57 @@
 .FileManagement {
     background-color: #8fc13e;
     width: auto;
-    height: 300px;
-    text-align: center;
+    height: 500px;
+    text-align: left;
+    overflow: hidden;
 }
+
+.contain {
+    position: relative;
+    margin: auto;
+}
+
+#drop1, #drop2 {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#main, #addmain, #src, #addsrc {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#srcFiles {
+    padding-left: 25px;
+    display: none;
+    padding-top: 0px;
+    width: 0px;
+    margin: 0;
+}
+
+#mainFiles {
+    padding-left: 25px;
+    display: none;
+    padding-top: 0px;
+
+    width: 0px;
+    margin: 0;
+}
+
+#Srcs {
+    padding-top: 100px;
+}
+
+#Mains {
+    display: none;
+    padding-left: 25px;
+}
+
+
+
