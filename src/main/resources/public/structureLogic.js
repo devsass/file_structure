@@ -1,5 +1,7 @@
 /**
- * Created by austin on 3/24/16.
+ * @author Austin Sass
+ * @date 3/24/16
+ * @overview
  */
 var webSocket = new WebSocket("ws://" + location.hostname + ":" + location.port + "/structure");
 webSocket.createStructure = function () { };
@@ -40,11 +42,11 @@ function createFolder (divID) {
 
 
 /**
- * Creates a new div and button to act as a file place mark.
+ * Creates a new div and button to act as a file place-mark.
  * A double-click attribute is added to the newly created button,
  * allowing the end user to command the opening of a respective
  * file.
- * @param divID
+ * @param {String} divID - id of parent div.
  */
 
 function createFile (divID) {
@@ -82,16 +84,33 @@ function createDropButton(id, divId) {
     return dropB;
 }
 
-function createAddButton(id, param) {
+/**
+ * Creates a new button that is either able to create a new folder button or file button.
+ * @param {String} id - Will be used to set the new button's ID.
+ * @param {String} typeCall - Specifies whether this button is to be used as "createFile" or "createFolder".
+ * @returns {Element} - returns the a new button
+ *
+ * @example
+ * var newButton = createAddButton("foldButton001", "newFolder");
+ */
+function createAddButton(id, typeCall) {
     var addB = document.createElement("BUTTON");
     addB.innerHTML = (createImg(id+"img", 10, 10, "add_file.png")).outerHTML;
     addB.setAttribute("id", id);
     addB.setAttribute("class", "addButton")
-    addB.setAttribute("onclick", "createFile('" + param + "')");
+    addB.setAttribute("onclick", "createFile('" + typeCall + "')");
     document.body.appendChild(addB);
     return addB;
 }
 
+/**
+ *
+ * @param {String} id - Used to set id attribute of image.
+ * @param {String} hi - Used to set image height.
+ * @param {String} wi - Used to set image width.
+ * @param {String} imgfile - Name of image to be linked (Must be located in resource directory).
+ * @returns {Element}
+ */
 function createImg (id, hi, wi, imgfile) {
     var img = document.createElement("img");
     img.setAttribute("id", id);
@@ -102,6 +121,11 @@ function createImg (id, hi, wi, imgfile) {
     return img;
 }
 
+/**
+ *
+ * @param {String} id
+ * @returns {Element}
+ */
 function createDiv(id) {
     var div = document.createElement("div");
     div.setAttribute("id", id);
