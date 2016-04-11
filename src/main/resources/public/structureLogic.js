@@ -1,7 +1,13 @@
 /**
  * @author Austin Sass
  * @date 3/24/16
- * @overview
+ * @overview This source file contains much of the logic that goes into the file structure UI.
+ * See related files: index.html, fileManagement.css, fileManagementHandler.java
+ */
+
+/**
+ * File structure websocket.
+ * @type {WebSocket}
  */
 var webSocket = new WebSocket("ws://" + location.hostname + ":" + location.port + "/structure");
 webSocket.createStructure = function () { };
@@ -122,8 +128,8 @@ function createImg (id, hi, wi, imgfile) {
 }
 
 /**
- *
- * @param {String} id
+ * Appends a new div to a document.
+ * @param {String} id - id of the new div.
  * @returns {Element}
  */
 function createDiv(id) {
@@ -134,11 +140,12 @@ function createDiv(id) {
     return div;
 }
 
-function rightClick(){
-
-}
-
-
+/**
+ * Hides/Displays div content
+ *
+ * @param {String} id - id of div (folder) that contains submenu items. This is NOT the same div id2 is contained in.
+ * @param {String} id2 - id of button that call this function.
+ */
 function toggleDisplay(id, id2) {
     if (document.getElementById(id).style.display == "block") {
         document.getElementById(id).style.display = "none";
@@ -149,10 +156,16 @@ function toggleDisplay(id, id2) {
     }
 }
 
+/**
+ * Unimportant.
+ */
 function displayMenu(){
     alert('Menu Displayed')
 }
 
+/**
+ * Unimportant.
+ */
 function openFile() {
     alert('You opened a file');
 }
