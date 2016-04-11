@@ -6,6 +6,10 @@ webSocket.createStructure = function () { };
 var creator = document.getElementById('creator');
 var newfile = document.getElementById('newfile');
 var bCount = 1;
+/** JS File Structure Logic */
+/**
+ * @param{string} divID The the ID of the parent div in which the child div for the folder is to be created.
+ * */
 
 
 function createFolder (divID) {
@@ -21,7 +25,7 @@ function createFolder (divID) {
     button.appendChild(name);
     document.body.appendChild(button);
     button.setAttribute("id", buttonName);
-    button.setAttribute("class", "fileStyle");
+    button.setAttribute("class", "folderStyle");
     button.addEventListener("dblclick", openFile);
     div.appendChild(dropB);
     div.appendChild(img);
