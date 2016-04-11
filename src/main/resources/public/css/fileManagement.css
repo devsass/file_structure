@@ -1,7 +1,7 @@
 .FileManagement {
     background-color: #93a1a1;
     width: auto;
-    height: 500px;
+    height: 700px;
     text-align: left;
     overflow: scroll;
 
@@ -48,8 +48,6 @@
 }
 
 
-
-
 #main, #addmain, #src, #addsrc {
     background: transparent;
     border: none;
@@ -80,7 +78,7 @@
 
 #Srcs {
     color: #322931;
-    padding-top: 100px;
+    padding-top: 5px;
 }
 
 #Mains {

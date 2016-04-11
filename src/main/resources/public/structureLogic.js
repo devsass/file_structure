@@ -6,10 +6,13 @@ webSocket.createStructure = function () { };
 var creator = document.getElementById('creator');
 var newfile = document.getElementById('newfile');
 var bCount = 1;
-/** JS File Structure Logic */
+
+
+
 /**
- * @param{string} divID The the ID of the parent div in which the child div for the folder is to be created.
- * */
+ * Creates a new div (folder) to be used as a container for more divs and buttons and places it inside another div (folder).
+ * @param {string} divID - This is the id of the parent div in which the child div for the new folder will be created.
+ */
 
 
 function createFolder (divID) {
@@ -35,6 +38,15 @@ function createFolder (divID) {
     document.getElementById(divID).appendChild(div);
 }
 
+
+/**
+ * Creates a new div and button to act as a file place mark.
+ * A double-click attribute is added to the newly created button,
+ * allowing the end user to command the opening of a respective
+ * file.
+ * @param divID
+ */
+
 function createFile (divID) {
     var buttonName = 'button' + bCount;
     bCount += 1;
@@ -53,6 +65,13 @@ function createFile (divID) {
     document.getElementById(divID).appendChild(div);
 }
 
+/**
+ * This function returns a new button that is used to the toggle the display of submenus.
+ * Usage of this function can been seen in the createFolder function.
+ * @param id
+ * @param divId
+ * @returns {Element}
+ */
 function createDropButton(id, divId) {
     var dropB = document.createElement("BUTTON");
     dropB.innerHTML = ">";
